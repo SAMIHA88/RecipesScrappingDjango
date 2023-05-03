@@ -174,7 +174,7 @@ def create_image(request):
     return render(request ,'create_image.html',{'form' : form})
 
 def delete_image(request,pk):
-    image = get_object_or_404(Note,pk=pk)
+    image = get_object_or_404(Image,pk=pk)
     image.delete()
     return redirect('/images')
 
